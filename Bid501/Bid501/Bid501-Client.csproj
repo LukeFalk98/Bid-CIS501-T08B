@@ -85,6 +85,9 @@
     </Compile>
     <Compile Include="ContViewInterfaces\ServerHandler.cs" />
     <Compile Include="ContViewInterfaces\ServerObserver.cs" />
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

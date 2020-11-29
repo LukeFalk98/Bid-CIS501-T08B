@@ -10,8 +10,10 @@ using System.Windows.Forms;
 
 namespace Bid501
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : Form, LoginObserver
     {
+        public LoginHandler handler { private get; set; }
+
         public LoginForm()
         {
             InitializeComponent();
@@ -70,6 +72,11 @@ namespace Bid501
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void LoginButton_Click(object sender, EventArgs e)
+        {
+            handler.HandleLogin("login/" + UsernameBox.Text + ',' + PasswordBox.Text);
+        }
+
+        public void updateLogin()
         {
 
         }

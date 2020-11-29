@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface LoginHandler
+    public interface LoginHandler
     {
+        void HandleLogin(string args);
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Bid501
 {
-    public partial class BidForm : Form
+    public partial class BidForm : Form, BidObserver
     {
         public BidForm()
         {
             InitializeComponent();
+        }
+
+        public void updateBid()
+        {
+
         }
     }
 }

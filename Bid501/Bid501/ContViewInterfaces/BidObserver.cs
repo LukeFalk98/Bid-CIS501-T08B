@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface BidObserver
+    public interface BidObserver
     {
+        void updateBid();
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface BidHandler
+    public interface BidHandler
     {
+        void HandleBid(string args);
     }
 }

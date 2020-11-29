@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface ProductHandler
+    public interface ProductHandler
     {
+        void HandleProduct(string args);
     }
 }

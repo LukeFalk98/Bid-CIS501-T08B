@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace Bid501
 {
-    public partial class ServerForm : Form
+    public partial class ServerForm : Form, ServerObserver
     {
+        public ServerHandler handler { private get; set; }
+
         public ServerForm()
         {
             InitializeComponent();
+        }
+
+        public void updateServer()
+        {
+
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            handler.HandleServer("addItem/");
         }
     }
 }

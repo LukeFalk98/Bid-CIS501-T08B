@@ -42,11 +42,33 @@ namespace Bid501
             set { numBids = value; }
         }
 
-        private bool status = false;
+        private bool status = true;
         public bool Status
         {
             get => status;
             set { status = value; }
+        }
+
+        public void UpdateStatus()
+        {
+            if (DateTime.Now.Day == time.Day)
+            {
+                if (DateTime.Now.Hour == time.Hour)
+                {
+                    if (DateTime.Now.Minute == time.Minute)
+                    {
+                        status = false;
+                        return;
+                    }
+                }
+            }
+            status = true;
+            return;
+        }
+
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

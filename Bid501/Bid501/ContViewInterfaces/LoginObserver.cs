@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface LoginObserver
+    public interface LoginObserver
     {
+        void updateLogin();
     }
 }

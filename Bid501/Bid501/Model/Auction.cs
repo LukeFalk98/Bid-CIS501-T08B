@@ -13,7 +13,27 @@ namespace Bid501
         private List<Item> itemList = new List<Item>();
         public List<Item> ItemList
         {
-            get => itemList
+            get => itemList;
+            set
+            {
+                itemList = value;
+            }
+        }
+
+        public Bid PlaceBid(double amount, Item item)
+        {
+            item.UpdateStatus();
+            if (item.MinBid >= amount && item.Status)
+            {
+                item.NumBids++;
+                item.MinBid = amount;
+                Bid b = new Bid();
+                b.Amount = amount;
+                b.Article = item;
+                b.User = user;
+                return b;
+            }
+            else return null;
         }
     }
 }

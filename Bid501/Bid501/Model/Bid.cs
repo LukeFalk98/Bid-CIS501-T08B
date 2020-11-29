@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    class Bid
+    public class Bid
     {
+        public string User { get; set; }
+        public IItem Article { get; set; }
+        public double Amount { get; set; }
     }
 }

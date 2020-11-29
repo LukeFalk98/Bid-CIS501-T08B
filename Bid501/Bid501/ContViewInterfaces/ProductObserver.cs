@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    interface ProductObserver
+    public interface ProductObserver
     {
+        void updateProduct();
     }
 }

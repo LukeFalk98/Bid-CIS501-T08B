@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Bid501
 {
-    public partial class AddProductForm : Form
+    public partial class AddProductForm : Form, ProductObserver
     {
+        public ProductHandler handler { private get; set; }
+
         public AddProductForm()
         {
             InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            if (ItemList.SelectedItem != null)
+            {
+                Item i = (Item)ItemList.SelectedItem;
+                handler.HandleProduct("addProduct/" + i.ToString() + ',' 
+                                                    + i.Time.ToString() + ',' 
+                                                    + i.MinBid.ToString() + ',' 
+                                                    + i.NumBids.ToString() + ',' 
+                                                    + i.Status.ToString());
+            }
+        }
+
+        public void updateProduct()
+        {
+
         }
     }
 }

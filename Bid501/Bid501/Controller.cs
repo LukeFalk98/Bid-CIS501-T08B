@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bid501
 {
-    class Controller
+    public class Controller
     {
     }
 }
